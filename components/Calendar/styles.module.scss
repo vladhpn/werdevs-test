@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+.section{
+    background-color: $primary-color;
+    height: 100vh;
+    padding:0 105px 0 120px;
+}
+.calendar {
+  width: calc(100% / 7);
+  height: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: $secondary-text-color;
+  cursor: pointer;
+
+}
+
+.table{
+   padding: 25px 0;
+   border-bottom: 1px solid red;
+}
+
+.selected {
+  text-align: center;
+  background-color: $accent-color;
+}
+
+.box_days{
+    padding: 16px 0 19px;
+    border-bottom: 1px solid red;
+    
+}
+
+.days{
+    width: calc(100% / 7);
+  height: 20px;
+  margin: 12px 25px;
+  text-align: center;
+  color: $secondary-text-color;
+  text-transform: uppercase;
+}

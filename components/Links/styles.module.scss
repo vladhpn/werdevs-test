@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+.box {
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+  &:last-child {
+    margin-right: 110px;
+  }
+}
+
+.text {
+  font-family: $font-primary;
+  letter-spacing: 0.56px;
+  color: $title-text-color;
+  text-transform: uppercase;
+}

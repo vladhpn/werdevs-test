@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 210px 0 19px;
+    border-bottom: 1px solid red;
+}
+
+.title{
+    font-family: $font-primary;
+    text-align: center;
+    color: $secondary-text-color;
+    text-transform: uppercase;
+}
+
+.button{
+    fill: white;
+}

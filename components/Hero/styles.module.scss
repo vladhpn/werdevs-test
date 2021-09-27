@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+.section {
+    display: flex;
+    background-image: url('../../images/\ background.png');
+  //   background-size: cover;
+  height: 100vh;
+}
+
+.title {
+  padding-top: 193px;
+  font-family: $font-primary;
+  color: $accent-color;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 3.5px;
+  font-size: 50px;
+}
+
+.text {
+  padding-top: 44px;
+  font-family: $font-primary;
+  letter-spacing: 0.6px;
+  color: $secondary-text-color;
+  text-align: right;
+  font-size: 30px;
+}

@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+.header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 0;
+}
+
+.logo_box {
+  display: flex;
+  align-items: center;
+  margin-left: 110px;
+}
+
+.logo_yellow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdd000;
+}
+
+.text {
+  font-weight: bold;
+}
+.letter_r {
+  font-size: 49px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-content: center;
+}
