@@ -1,0 +1,9 @@
+.box {
+  display: none;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}

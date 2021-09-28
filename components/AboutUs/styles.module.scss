@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.container {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+}
+
+.title {
+  font-family: $font-primary;
+  color: $title-text-color;
+  letter-spacing: -0.68px;
+  font-size: 24px;
+  text-align: left;
+  padding-bottom: 20px;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    font-size: 34px;
+    padding-bottom: 78px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 34px;
+    padding-bottom: 78px;
+  }
+}
+
+.text {
+  font-family: $font-primary;
+  color: $title-text-color;
+  text-align: left;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
+  }
+}

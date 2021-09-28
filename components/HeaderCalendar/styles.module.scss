@@ -1,19 +1,25 @@
 @import '../../styles/variables';
-.box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 19px;
+  border-bottom: 1px solid $title-text-color;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding: 100px 0 19px;
+  }
+  @media (min-width: 1024px) {
     padding: 210px 0 19px;
-    border-bottom: 1px solid red;
+  }
 }
 
-.title{
-    font-family: $font-primary;
-    text-align: center;
-    color: $secondary-text-color;
-    text-transform: uppercase;
+.title {
+  font-family: $font-primary;
+  text-align: center;
+  color: $secondary-text-color;
+  text-transform: uppercase;
 }
 
-.button{
-    fill: white;
+.button {
+  fill: white;
 }

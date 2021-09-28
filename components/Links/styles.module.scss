@@ -1,17 +1,110 @@
 @import '../../styles/variables';
 
-.box {
-  &:not(:last-child) {
-    margin-right: 70px;
-  }
-  &:last-child {
-    margin-right: 110px;
-  }
-}
-
 .text {
   font-family: $font-primary;
   letter-spacing: 0.56px;
   color: $title-text-color;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    display: block;
+    padding-top: 35px;
+    text-align: center;
+    background-color: white;
+  }
+
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+    &:last-child {
+      margin-right: 110px;
+    }
+  }
+  @media (min-width: 1024px) {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+    &:last-child {
+      margin-right: 110px;
+    }
+  }
 }
+.active {
+  position: relative;
+  font-family: $font-primary;
+  letter-spacing: 0.56px;
+  color: $title-text-color;
+  text-transform: uppercase;
+
+  // &:last-child {
+  //   // margin-right: 110px;
+  //   // &::before {
+  //   //   content: '';
+
+  //   //   position: absolute;
+  //   //   left: 30px;
+  //   //   bottom: -20px;
+
+  //   //   background: yellow;
+  //   //   border-radius: 50%;
+  //   //   height: 1em;
+  //   //   width: 1em;
+  //   // }
+  // }
+
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    display: block;
+    padding-top: 35px;
+    text-align: center;
+    background-color: white;
+  }
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    &:last-child {
+      margin-right: 110px;
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 30px;
+        bottom: -20px;
+
+        background: yellow;
+        border-radius: 50%;
+        height: 1em;
+        width: 1em;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+  @media (min-width: 1024px) {
+    &:last-child {
+      margin-right: 110px;
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 30px;
+        bottom: -20px;
+
+        background: yellow;
+        border-radius: 50%;
+        height: 1em;
+        width: 1em;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+}
+
+// .box {
+//   position: absolute;
+//   background-color: #fff;
+//   top: 40px;
+//   right: 0;
+//   width: 100%;
+// }

@@ -1,4 +1,5 @@
-import Links from '../Links';
+import MobileNavigation from '../MobileNavigation';
+import Navigation from '../Navigation';
 import styles from './styles.module.scss';
 
 const MainContainer = ({ children }) => {
@@ -17,8 +18,8 @@ const MainContainer = ({ children }) => {
         </div>
 
         <nav className={styles.nav}>
-          <Links href={'/'} text={'Home'} />
-          <Links href={'/about'} text={'About Us'} />
+          <Navigation />
+          <MobileNavigation />
         </nav>
       </header>
       <section>{children}</section>

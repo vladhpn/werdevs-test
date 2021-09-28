@@ -1,0 +1,27 @@
+.box {
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.menu_button {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.link {
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    top: 77px;
+    right: 0;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}

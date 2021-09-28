@@ -1,41 +1,84 @@
 @import '../../styles/variables';
-.section{
-    background-color: $primary-color;
+.section {
+  background-color: $primary-color;
+  height: 380px;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding: 0 20px;
     height: 100vh;
-    padding:0 105px 0 120px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 105px 0 120px;
+    height: 100vh;
+  }
 }
 .calendar {
   width: calc(100% / 7);
-  height: 20px;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   color: $secondary-text-color;
   cursor: pointer;
-
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding: 20px;
+  }
+  @media (min-width: 1024px) {
+    padding: 20px;
+  }
 }
 
-.table{
-   padding: 25px 0;
-   border-bottom: 1px solid red;
+.table {
+  padding: 10px 0;
+  border-bottom: 1px solid $title-text-color;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding: 25px 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 25px 0;
+  }
 }
 
 .selected {
   text-align: center;
   background-color: $accent-color;
+  padding: 10px;
+  cursor: pointer;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    padding: 20px;
+  }
+  @media (min-width: 1024px) {
+    padding: 20px;
+  }
 }
 
-.box_days{
+.box_days {
+  padding: 10px 0 10px;
+
+  border-bottom: 1px solid $title-text-color;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
     padding: 16px 0 19px;
-    border-bottom: 1px solid red;
-    
+  }
+  @media (min-width: 1024px) {
+    padding: 16px 0 19px;
+  }
 }
 
-.days{
-    width: calc(100% / 7);
-  height: 20px;
-  margin: 12px 25px;
+.all_days {
+  display: flex;
+}
+.days {
+  width: calc(100% / 7);
+  height: 10px;
+  margin: 10px 17px;
+
   text-align: center;
   color: $secondary-text-color;
   text-transform: uppercase;
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    height: 20px;
+    margin: 12px 25px;
+  }
+  @media (min-width: 1024px) {
+    height: 20px;
+    margin: 12px 25px;
+  }
 }

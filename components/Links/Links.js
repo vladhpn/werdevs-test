@@ -1,12 +1,17 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './styles.module.scss';
-const Links = ({ href, text }) => {
+const Links = ({ href, text, isMobile, closeMobileMenu }) => {
+  const router = useRouter();
   return (
-    <div className={styles.box}>
-      <Link href={href}>
-        <a className={styles.text}>{text}</a>
-      </Link>
-    </div>
+    <Link href={href}>
+      <a
+        className={router.pathname == '/' ? styles.text : styles.active}
+        onClick={() => isMobile && closeMobileMenu()}
+      >
+        {text}
+      </a>
+    </Link>
   );
 };
 
