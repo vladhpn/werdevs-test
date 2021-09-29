@@ -1,16 +1,19 @@
-// import Header from '../components/Header';
+import { useState } from 'react';
 import MainContainer from '../components/MainContainer';
 import Hero from '../components/Hero';
-// import styles from '../styles/Home.module.css';
+import Calendar from '../components/Calendar';
+import moment from 'moment';
+import styles from '../styles/Index.module.scss';
 
 export default function Index() {
+  const [value, setValue] = useState(moment());
+  console.log(moment.locale());
   return (
     <MainContainer>
-      <Hero />
-
-      {/* <main className={styles.main}></main> */}
-
-      {/* <footer className={styles.footer}></footer> */}
+      <div className={styles.container}>
+        <Hero />
+        <Calendar value={value} onChange={setValue} />
+      </div>
     </MainContainer>
   );
 }

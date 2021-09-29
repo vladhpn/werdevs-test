@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-const Modal = ({ onClose }) => {
+const Modal = ({ onClose, data }) => {
   return (
     <div className={styles.modal}>
       <div className={styles.modal_conttainer}>
@@ -10,11 +10,11 @@ const Modal = ({ onClose }) => {
           <div className={styles.box_content}>
             <div className={styles.content}>
               <h4 className={styles.title}> Month </h4>
-              <p className={styles.text}>September </p>
+              <p className={styles.text}>{data.format('MMMM')} </p>
             </div>
             <div className={styles.content}>
               <h4 className={styles.title}> Day </h4>
-              <p className={styles.text}> friday</p>
+              <p className={styles.text}> {data.format('Do dddd')}</p>
             </div>
           </div>
         </div>

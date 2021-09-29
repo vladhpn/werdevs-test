@@ -8,7 +8,10 @@
   @media screen and (max-width: 1023px) and (min-width: 768px) {
     padding: 100px 0 19px;
   }
-  @media (min-width: 1024px) {
+  @media screen and (max-width: 1443px) and (min-width: 1024px) {
+    padding: 180px 0 19px;
+  }
+  @media (min-width: 1444px) {
     padding: 210px 0 19px;
   }
 }

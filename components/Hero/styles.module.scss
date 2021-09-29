@@ -1,16 +1,8 @@
 @import '../../styles/variables';
 .section {
   background-image: url('../../images/\ background.png');
-  //   background-size: cover;
-
-  @media screen and (max-width: 1023px) and (min-width: 768px) {
-    display: flex;
-    height: 100vh;
-  }
-  @media (min-width: 1024px) {
-    display: flex;
-    height: 100vh;
-  }
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -25,12 +17,18 @@
   @media screen and (max-width: 1023px) and (min-width: 768px) {
     padding-top: 100px;
   }
-  @media (min-width: 1024px) {
+  @media screen and (max-width: 1443px) and (min-width: 1024px) {
+    padding-top: 160px;
+    margin-right: 10px;
+    font-size: 50px;
+  }
+  @media (min-width: 1444px) {
     padding-top: 193px;
     letter-spacing: 3.5px;
     font-size: 50px;
+    margin-left: 674px;
+    margin-right: 33px;
   }
-  // margin: 0 33px 0 674px;
 }
 
 .text {
@@ -41,16 +39,28 @@
   text-align: right;
   font-size: 20px;
   margin-right: 5px;
-  margin-bottom: 50px;
+  padding-bottom: 20px;
   @media screen and (max-width: 1023px) and (min-width: 768px) {
     padding-top: 44px;
+    margin-bottom: 50px;
     letter-spacing: 0.6px;
     font-size: 30px;
   }
-  @media (min-width: 1024px) {
+
+  @media screen and (max-width: 1443px) and (min-width: 1024px) {
     padding-top: 44px;
     letter-spacing: 0.6px;
     font-size: 30px;
+    margin-left: 250px;
+    margin-right: 10px;
+    margin-bottom: 50px;
   }
-  // margin: 0 33px 0 674px;
+  @media (min-width: 1444px) {
+    padding-top: 44px;
+    letter-spacing: 0.6px;
+    font-size: 30px;
+    margin-left: 674px;
+    margin-right: 33px;
+    margin-bottom: 50px;
+  }
 }

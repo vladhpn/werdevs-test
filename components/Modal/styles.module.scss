@@ -12,12 +12,14 @@
   left: 0;
   background-color: rgba(5, 5, 5, 0.7);
   height: 100vh;
-  //   opacity: 0.85;
 
   @media screen and (max-width: 1023px) and (min-width: 768px) {
-    top: 194px;
+    top: 137px;
   }
-  @media (min-width: 1024px) {
+  @media screen and (max-width: 1443px) and (min-width: 1024px) {
+    top: 158px;
+  }
+  @media (min-width: 1444px) {
     top: 194px;
   }
 }
@@ -52,7 +54,6 @@
   font-family: $font-primary;
   color: $title-text-color;
   font-size: 20px;
-  //   margin: 5px 15px 15px;
   border: 1px solid $accent-color;
   @media screen and (max-width: 1023px) and (min-width: 768px) {
     padding: 5px 50px 5px 10px;

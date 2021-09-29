@@ -1,0 +1,10 @@
+.container {
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    display: flex;
+    height: 100vh;
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    height: 100vh;
+  }
+}

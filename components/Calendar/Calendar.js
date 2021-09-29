@@ -3,16 +3,11 @@ import { useState, useEffect } from 'react';
 import BuilCalendar from '../BuilCalendar';
 import HeaderCalendar from '../HeaderCalendar';
 import Modal from '../Modal';
-import { v4 as uuidv4 } from 'uuid';
-import moment from 'moment';
 import styles from './styles.module.scss';
 
-const Calendar = () => {
+const Calendar = ({ value, onChange }) => {
   const [calendar, setCalendar] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [value, setValue] = useState(moment());
-  // const id = uuidv4();
-  // console.log(id);
 
   const toggleModal = () => setShowModal((prev) => !prev);
 
@@ -20,24 +15,34 @@ const Calendar = () => {
     setCalendar(BuilCalendar(value));
   }, [value]);
 
-  // const openDAy = () => setValue(day)
+  function beforeToday(day) {
+    return value.isBefore(day, 'month');
+  }
+
+  function afterToday(day) {
+    return value.isAfter(day, 'month');
+  }
+
+  function dayStyles(day) {
+    if (beforeToday(day)) return styles.before;
+    if (afterToday(day)) return styles.before;
+    return value.isSame(day, 'day') ? styles.selected : styles.calendar;
+  }
 
   return (
     <>
       <div className={styles.section}>
-        <HeaderCalendar value={value} setValue={setValue} />
+        <HeaderCalendar value={value} setValue={onChange} />
         <div className={styles.table}>
           {calendar.map((week, index) => (
             <div key={index} className={styles.all_days}>
               {week.map((day, index) => (
                 <div
                   key={index}
-                  className={
-                    value.isSame(day, 'day') ? styles.selected : styles.calendar
-                  }
-                  onClick={() => setValue(day)}
+                  className={dayStyles(day)}
+                  onClick={toggleModal}
                 >
-                  <span onClick={toggleModal}>
+                  <span onClick={() => onChange(day)}>
                     {' '}
                     {day.format('D').toString()}
                   </span>
@@ -52,7 +57,7 @@ const Calendar = () => {
           ))}
         </div>
       </div>
-      {showModal && <Modal onClose={toggleModal} />}
+      {showModal && <Modal onClose={toggleModal} data={value} />}
     </>
   );
 };
